@@ -19,17 +19,22 @@ inicio
         escrever ("Qual o ano: ");
         ler( iano);
 
-    //calcular o proximo dia do ano e calcular  
-        if idia < 30  then
+    //calcular o proximo dia do ano e calcular
+        se idia < 30  então
             idia <- idia + 1;
-        else
+        senao
             if imes < 12 then
-                imes <- mes + 1;
+                imes <- imes + 1;
             else
                 iano <- iano +1;
                 idia<- 1;
                 imes<- 1;
             end_if;
-        end_if;
+        fim_se;
+
+    //retorna valores para interface
+        escreve(idia+"/"+imes+"/"+iano);
+
+
 
 fim;
