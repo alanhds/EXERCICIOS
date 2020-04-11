@@ -1,0 +1,32 @@
+Para os enunciados abaixo, identifique as variáveis (nome, tipo e valor inicial) 
+e na sequência, elabore o algoritmo.
+
+1.	Crie um algoritmo que, dados o tamanho de três lados informados pelo usuário,
+ verifique se: (1) é um triângulo isósceles, (2) é equilátero, (3) é escaleno ou 
+ (4) não é um triângulo.
+
+2.	Considerando o sistema de notas da universidade X, construa um algoritmo 
+que, dadas 4 notas de um aluno inseridas pelo usuário, calcule a média e imprima 
+se o aluno foi aprovado, recuperação ou reprovado. O usuário deve inserir antes
+ das notas o valor limite para aprovado, recuperação ou reprovado.
+
+3.	Faça um algoritmo que, dados três números inteiros, os imprima em 
+ordem crescente.
+
+4.	Você viajou para os Estados Unidos e descobriu que lá a unidade de medida de 
+temperatura é diferente do Brasil. Para não ter que acessar um serviço na internet 
+a todo o momento, nem fazer os cálculos manualmente, faça um algoritmo que converte
+ a temperatura, dada uma unidade de medida e uma temperatura. Ou seja, se informado
+  em Celsius o algoritmo deve fornecer a temperatura em Fahrenheit, já se a 
+  temperatura for fornecida em Fahrenheit, o resultado deve ser em graus Celsius.
+
+5.	Faça um algoritmo que, dado o valor total em reais e o número de prestações 
+desejadas, calcule o valor de cada prestação. O número mínimo de prestações deve 
+ser 12. Se o número de prestações for maior ou igual a 24, adicione 10% de juros 
+ao valor total, se for maior ou igual a 36, adicione 15% de juros ao valor total.
+
+
+6.	[SUPER DESAFIO 0,5] Problemas simples do cotidiano podem representar desafios
+ para o mundo computacional. Faça um algoritmo que, dados três números inteiros
+  representando dia, mês e ano de uma data, imprima qual o dia seguinte. 
+  Para facilitar, leve em consideração que TODOS os meses do ano tem 30 dias.
