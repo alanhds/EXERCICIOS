@@ -1,3 +1,7 @@
+// 6.	[SUPER DESAFIO 0,5] Problemas simples do cotidiano podem representar desafios
+//  para o mundo computacional. Faça um algoritmo que, dados três números inteiros
+//   representando dia, mês e ano de uma data, imprima qual o dia seguinte. 
+//   Para facilitar, leve em consideração que TODOS os meses do ano tem 30 dias.
 
 #include<stdio.h>
 #include<stdlib.h>
