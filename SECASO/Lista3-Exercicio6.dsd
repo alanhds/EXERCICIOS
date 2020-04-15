@@ -1,0 +1,212 @@
+Programa Exercicio6;
+//em portugol
+Var
+    //declaração de variaveis
+        int  idia,imes,iano ;
+        int  idiaDez,ianoDez, ianoCentena, ianoMilhar, ianoUnidade;
+Inicio
+
+    //Entrada de dados
+        imprima("Qual o dia ?");
+        leia(idia);
+
+        imprima("Qual o mes ?");
+        leia(imes);
+
+        imprima("Qual o ano ?");
+        leia(iano);
+
+    //Comparações
+       se (idia<30)
+       {
+           idia ←  idia + 1;
+       }
+       senao
+       {
+           se (imes<12)
+           {
+                imes ←  imes + 1;
+                idia ←  1;
+           }
+           entao
+           {
+                imes ←  1;
+                idia ← 1;
+                iano ←  iano + 1;
+
+           }
+       }
+
+    //imprime data 
+        escreva("\nData : ");
+
+    //impressão do dia
+        se (idia < 19){
+            //imprime o dia
+            escreveUnidade(idia);
+        }senao
+        {
+            idiaDez = idia/10;
+                se ( idia % 10 == 0)
+                {
+                    escreveDezena(idiaDez);
+                }senao
+                {
+                    escreveDezena(idiaDez);
+                    imprima(" e ");
+                    idia ←  idia-(idiaDez*10);
+                    escreveUnidade(idia);
+                }
+
+        }
+
+     imprima(" de ");
+
+    //Imprime o mes 
+        escreveMes(imes);
+        imprima(" de ");
+
+    //Imprime o ano
+
+        //milhar
+            se (iano>999)
+            {
+                ianoMilhar ←  iano /1000;
+                escreveMilhar( ianoMilhar);
+            }
+
+            iano =iano - (ianoMilhar*1000);
+
+        //centena
+            ianoCentena ←  iano /100;
+
+            se (iano>99)
+            {
+                se ( iano % 100 == 0)
+                {
+                    escreveCentena(ianoCentena);
+                }senao
+                {
+                    escreveCentenaE( ianoCentena);
+                }
+            }
+
+            iano ← iano - (ianoCentena*100);
+
+        //dezena
+            se (iano < 19){
+                //unidade
+                    escreveUnidade(iano);
+            }senao
+            {
+                //dezena
+                 ianoDez ← iano/10;
+                    se ( iano % 10 == 0)
+                    {
+                        escreveDezena(ianoDez);
+                    }senao
+                    {
+                        escreveDezena(ianoDez);
+                        escreva(" e ");
+                        iano ←  iano-(ianoDez*10);
+                        escreveUnidade(iano);
+                    }
+
+            }
+
+
+Fim;
+
+void escreveUnidade(int unidade){
+    seleciona (unidade)
+            {
+                   caso 1:escreva("um");
+                    caso 2:escreva("dois");
+                    caso 3:escreva("três");
+                    caso 4:escreva("quatro");
+                    caso 5:escreva("cinco");
+                    caso 6:escreva("seis");
+                    caso 7:escreva("sete");
+                    caso 8:escreva("ioto");
+                    caso 9:escreva("nove");
+                    caso 10:escreva("dez");
+                    caso 11:escreva("onze");
+                    caso 12:escreva("doze");
+                    caso 13:escreva("treze");
+                    caso 14:escreva("quatorze");
+                    caso 15:escreva("quinze"); 
+                    caso 16:escreva("dezesies"); 
+                    caso 17:escreva("dezesete"); 
+                    caso 18:escreva("dezoito"); 
+                    caso 19:escreva("dezenove"); 
+                }
+}
+
+void escreveDezena(int dezena){
+ seleciona (dezena)
+            {
+                    caso 2:escreva("vinte"); 
+                    caso 3:escreva("trinta"); 
+                    caso 4:escreva("quarenta"); 
+                    caso 5:escreva("cinquenta"); 
+                    caso 6:escreva("sessenta"); 
+                    caso 7:escreva("setenta"); 
+                    caso 8:escreva("iotenta"); 
+                    caso 9:escreva("noventa"); 
+                }
+}
+
+void escreveCentena(int centena){
+ seleciona (centena)
+            {       
+                    caso 1:escreva("cem "); 
+                    caso 2:escreva("duzentos "); 
+                    caso 3:escreva("trezentos "); 
+                    caso 4:escreva("quatocentos "); 
+                    caso 5:escreva("quinhentos "); 
+                    caso 6:escreva("sissentos "); 
+                    caso 7:escreva("setecento "); 
+                    caso 8:escreva("oitocentos "); 
+                    caso 9:escreva("novecentos "); 
+                }
+}
+
+void escreveCentenaE(int centena){
+ seleciona (centena)
+            {       
+                    caso 1:escreva("cento e "); 
+                    caso 2:escreva("duzentos e "); 
+                    caso 3:escreva("trezentos e "); 
+                    caso 4:escreva("quatocentos e "); 
+                    caso 5:escreva("quinhentos e "); 
+                    caso 6:escreva("sissentos e "); 
+                    caso 7:escreva("setecento e "); 
+                    caso 8:escreva("oitocentos e "); 
+                    caso 9:escreva("novecentos e "); 
+                }
+}
+void escreveMilhar(int milhar){
+    se (milhar>1){
+        escreveUnidade( milhar );
+        escreva(" ");
+    }
+    escreva(" mil ");
+}
+
+void escreveMes(int mes){
+ seleciona (mes)
+            {
+                    caso 1:escreva("Janeiro"); 
+                    caso 2:escreva("Fevereito"); 
+                    caso 3:escreva("Marco"); 
+                    caso 4:escreva("Abril"); 
+                    caso 5:escreva("Maio"); 
+                    caso 6:escreva("Junho"); 
+                    caso 7:escreva("Julho"); 
+                    caso 8:escreva("Agosto"); 
+                    caso 9:escreva("Setembro"); 
+                    caso 10:escreva("Outubro"); 
+                    caso 11:escreva("Novembro"); 
+                    caso 12:escreva("dezembro"); 
+                }
+}
