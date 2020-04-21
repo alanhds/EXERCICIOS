@@ -1,0 +1,24 @@
+Programa Exercicio05;
+
+Var
+    real: a,b,c,x1,x2,delta;
+
+Inicio
+
+    imprima("Digite valor para a: ");
+    leia(a);
+    imprima("Digite valor para a: ");
+    leia(b);
+    imprima("Digite valor para a: ");
+    leia(c);
+
+    delta  ← (b^2 - 4*a*c);
+
+    x1 ← (-b+ raiz(delta))/2;
+    x2 ← (-b- raiz(delta))/2;
+
+
+    imprima( "O valor de x1 é :" + x1);
+    imprima( "O valor de x2 é :" + x2);
+
+Fim.

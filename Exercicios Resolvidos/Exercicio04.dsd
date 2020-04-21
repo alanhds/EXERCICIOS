@@ -1,0 +1,19 @@
+Programa Exercicio04;
+
+Var
+    real: salario,resultado;
+    caractere: nome;
+
+Inicio
+
+    imprima("Digite o nome: ");
+    leia(nome);
+    imprima("Digite salário: ");
+    leia(salario);
+
+
+    resultado ← salario * 1,15;
+
+    imprima( nome + " " + resultado);
+
+Fim.
