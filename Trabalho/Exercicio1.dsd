@@ -1,0 +1,66 @@
+Programa Exercicio1;
+Var
+    int: resto, saque, notas, cedula;
+
+Inicio
+
+    //entrada de dados
+    imprima("Qual o valor do saque?");
+    leia (saque);
+
+    //verifica saque de valor negativo
+    se (saque <= 0) entao 
+
+        imprima("Não é permitida saque de valor negativo!!");
+
+    senao
+
+        //se o valor do saque for positivo efetua a lógica
+         
+
+        imprima("Voce sacou o total de " + saque + " R$");
+
+       //NOTAS DE 100 
+            cedula <= 100;
+            resto <= saque % cedula;
+            saque <= saque - resto;
+            notas <= saque / cedula;
+            imprima("Notas de " + cedula + "R$ :" + notas);
+
+        //NOTAS DE 50
+            cedula <= 50;
+            resto <= saque % cedula;
+            saque <= saque - resto;
+            notas <= saque / cedula;
+            imprima("Notas de " + cedula + "R$ :" + notas);
+
+        //NOTAS DE 20
+            cedula <= 20;
+            resto <= saque % cedula;
+            saque <= saque - resto;
+            notas <= saque / cedula;
+            imprima("Notas de " + cedula + "R$ :" + notas);
+
+        //NOTAS DE 10
+            cedula <= 10;
+            resto <= saque % cedula;
+            saque <= saque - resto;
+            notas <= saque / cedula;
+            imprima("Notas de " + cedula + "R$ :" + notas);
+
+        //NOTAS DE 5
+            cedula <= 5;
+            resto <= saque % cedula;
+            saque <= saque - resto;
+            notas <= saque / cedula;
+            imprima("Notas de " + cedula + "R$ :" + notas);
+
+        //NOTAS DE 1
+            cedula <= 1;
+            resto <= saque % cedula;
+            saque <= saque - resto;
+            notas <= saque / cedula;
+            imprima("Notas de " + cedula + "R$ :" + notas);
+    fimse;
+
+Fim;
