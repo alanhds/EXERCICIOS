@@ -1,0 +1,68 @@
+Programa Exercicio3;
+Var
+
+    real: horasTrabalhadas, valorHora, salarioBruto, inss, ir,fgts, salarioLiquido, baseCalcIR;
+
+
+Inicio
+
+    //entrada de dados
+        imprima("Insira o total de horas trabalhadas : ");
+        leia(horasTrabalhadas);
+        imprima("Insira o valor da hora: "):
+        leia(valorHora);
+
+    //calculos 
+        salarioBruto ← valorHora * horasTrabalhadas;
+
+    //INSS
+        se (salarioBruto > 5645,81) entao
+            inss ← 621,03;
+        senao
+
+            se(salarioBruto > 2822,9 ) entao
+                inss ←  salarioBruto * 0,11;
+            senao
+                se( salarioBruto > 1693,72 ) entao
+                    inss ←  salarioBruto * 0,09;
+                senao
+                    inss ←  salarioBruto * 0,08;
+                fimse;
+            fimse;
+        fimse;
+
+    =SE(E6>4664,68;0,275;(SE(E6>3751,05;0,225;SE(E6>2826,65;0,15;SE(E6>1903,98;0,075;0)))))
+
+    //caulculo ir
+        baseCalcIR ← salarioBruto - inss;
+        se( baseCalcIR >4664,68 ) entao
+            ir ← baseCalcIR * 0,275; 
+        senao
+            se( baseCalcIR>3751,05)entao
+                ir ← baseCalcIR * 0,225; 
+            senao
+                se(baseCalcIR>2826,65) estao
+                   ir ← baseCalcIR * 0,15;  
+                senao
+                    se(baseCalcIR>1903,98)entao
+                       ir ← baseCalcIR *  0,075;
+                    senao
+                        ir←0;
+                    fimse;
+                fimse;
+            fimse;
+        fimse;
+
+    //calculo fgts
+        FGTS ← salarioBruto * 0,08;
+
+    //salario líquido
+        salarioLiquido ← salarioBruto - inss - ir;
+
+    imprima("Salario Bruto  : "     + salarioBruto +    "R$");
+    imprima("INSS           : -"    + INSS +    "R$");
+    imprima("IR             : -"    + IR +    "R$");
+    imprima("Salario líquido: "     + salarioLiquido +    "R$");
+    imprima("FGTS           : "     + FGTS +    "R$");
+
+Fim;

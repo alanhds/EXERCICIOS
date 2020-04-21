@@ -1,0 +1,37 @@
+Programa Exercicio2;
+Var
+
+    inteiro: numero, unidade, resto, ;
+
+Inicio
+
+    imprima("Digite algum valor menor que 1000");
+    leia (numero);
+
+    se (numero< 1000) entao
+
+        //CENTENAS
+            unidade ← 100;
+            resto ← numero % unidade;
+            numero ← numero - resto;
+            total ← numero / unidade;
+            imprima("Centenas :" + total);
+            
+        //DEZENAS
+            unidade ← 10;
+            resto ← numero % unidade;
+            numero ← numero - resto;
+            total ← numero / unidade;
+            imprima("Dezenas :" + total);
+            
+        //UNIDADES
+            unidade ← 1;
+            resto ← numero % unidade;
+            numero ← numero - resto;
+            total ← numero / unidade;
+            imprima("Unidades :" + total);
+
+    fimse;
+
+  
+Fim;
