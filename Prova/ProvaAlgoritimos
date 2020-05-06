@@ -1,8 +1,7 @@
-Programa EstruturaBasica;
-
+Programa ProvaAlgoritimos;
 Var
     caractere:  sexo, pergunta3, pergunta4, Continuar;
-    inteiro: idade;
+    inteiro: idade, i <- 0;
 
     inteiro: totalMasculino ← 0 ,totalFeminino← 0 , totalEntrevistados← 0 ;
     inteiro: totalCaso1 ← 0 , totalCaso3 ← 0  , totalCaso4 ← 0 ;
@@ -10,7 +9,9 @@ Var
 
 
     real: percentualMasc ← 0 , percentualFem ← 0 , percentualCaso1 ← 0 , percentualCaso3 ← 0,percentualCaso4 ← 0;
+    real: percentualEntrevistas_0A18 ← 0 ,percentualEntrevistas_19A59 ← 0 , percentualEntrevistas_60A ← 0 ;
 
+    real: perspectiva30dias <- 0;
 Inicio
 
     //formulario de entrada de dados
@@ -81,32 +82,35 @@ Inicio
             imprima("Deseja Continuar? S/N");
             leia (Continuar);
 
-
-
         fimenquanto
 
-    //CALCULOS SEGUNDA SAIDA
-        //PERCENTUAIS
-            percentualMasc  ← totalMasculino / totalEntrevistados * 100;
-            percentualFem  ← totalFeminino / totalEntrevistados * 100;
-            percentualCaso1 ← totalCaso1 / totalEntrevistados * 100;
-            percentualCaso3 ← totalCaso3 / totalEntrevistados * 100;
-            percentualCaso4 ← totalCaso4 / totalEntrevistados * 100;
+    //CALCULOS SEGUNDA SAIDA PERCENTUAIS
+        percentualMasc  ← totalMasculino / totalEntrevistados * 100;
+        percentualFem  ← totalFeminino / totalEntrevistados * 100;
+        percentualCaso1 ← totalCaso1 / totalEntrevistados * 100;
+        percentualCaso3 ← totalCaso3 / totalEntrevistados * 100;
+        percentualCaso4 ← totalCaso4 / totalEntrevistados * 100;
+        percentualEntrevistas_0A18 ← totalEntrevistas_0A18 / totalEntrevistados * 100;
+        percentualEntrevistas_19A59 ← totalEntrevistas_19A59 / totalEntrevistados * 100;
+        percentualEntrevistas_60A ← totalEntrevistas_60A / totalEntrevistados * 100;
 
     //SEGUNDA SAÍDA
         imprima("Percentual de entrevistas sexo masculino :" + percentualMasc + " %.");
         imprima("Percentual de entrevistas sexo masculino :" + percentualFem + " %.");
 
+        imprima("Percentual de entrevistas - Procurar uma unidade de saúde :" + percentualCaso1 + " %.");
+        imprima("Percentual de entrevistas - monitorar o estado de saúde em casa :" + percentualCaso3 + " %.");
+        imprima("Percentual de entrevistas - você está bem, mas fique em casa :" + percentualCaso4 + " %.");
 
+        imprima("Percentual de entrevistas entre as idades 0-18 :" + percentualEntrevistas_0A18 + " %.");
+        imprima("Percentual de entrevistas entre as idades 19-59 :" + percentualEntrevistas_19A59 + " %.");
+        imprima("Percentual de entrevistas entre as idades 60+ :" + percentualEntrevistas_60A + " %.");
 
+    //TERCEIRA SAÍDA
+        perspectiva30dias <- totalCaso1;
+        para i de 1 ate 30 passo 1
+            perspectiva30dias <- perspectiva30dias * 2
+            imprima("Perspectiva dia " + i + "º" + perspectiva30dias + " pessoas na unidade de saúde ");
+        fimpara
 
-    //Aqui eu atribuo o nome Diogo para variavel nome
-    nome <- "Diogo";
-    idade <- 30;
-    altura <- 1,75;
-    estaTrabalhando <- Verdadeiro;
-
-    imprima("Digite o nome e a idade da pessoa");
-    lei(nome,idade);
-    imprima("Nome: " + nome + " e idade " + idade);
 Fim.
