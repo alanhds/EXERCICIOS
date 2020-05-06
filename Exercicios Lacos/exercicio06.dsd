@@ -1,0 +1,20 @@
+Programa exercicio06;
+
+//6.	Elabore um algoritmo que efetue a soma de todos os números que se encontram no conjunto dos números de 1 até 20. Mostre no final o resultado dessa soma.
+
+Var
+
+    inteiro: i,isoma;
+
+Inicio
+    isoma ← 0;
+    i  ← 1;
+    enquanto (i <= 20) faca
+
+            isoma ← isoma + i;
+            
+            i ← i+1;
+	fimenquanto
+
+    imprima ("A soma dos valores é : " + isoma + "\n");
+Fim.

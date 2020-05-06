@@ -1,0 +1,38 @@
+Programa exercicio04;
+
+//4.	Escreva um algoritmo que leia 20 valores e encontre o maior e o menor deles. Mostre o resultado.
+
+Var
+	inteiro: i, inumero, iMaior,iMenor;
+Inicio
+
+    iMaior  ← 0;
+    iMenor ← 0;
+
+    imprima ("Digite o 1º numero \n");
+    leia (inumero);
+       
+    iMaior ← inumero;
+    iMenor ← inumero;
+
+	i  ← 2;
+    enquanto (i <= 20) faca
+
+            imprima ("Digite o "+ i + "º numero \n");
+            leia (inumero);
+            
+            se (inumero > iMaior) entao
+                iMaior ← inumero;
+            fimse;
+            
+            se (inumero < iMenor) entao
+                iMenor ← inumero;
+            fimse;
+            
+            
+            i ← i+1;
+	fimenquanto
+
+    imprima ("O maior valor é : " + iMaior + "\n");
+    imprima ("O menor valor é : " + iMenor + "\n");
+Fim.

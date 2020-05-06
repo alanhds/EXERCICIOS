@@ -1,0 +1,112 @@
+Programa EstruturaBasica;
+
+Var
+    caractere:  sexo, pergunta3, pergunta4, Continuar;
+    inteiro: idade;
+
+    inteiro: totalMasculino ← 0 ,totalFeminino← 0 , totalEntrevistados← 0 ;
+    inteiro: totalCaso1 ← 0 , totalCaso3 ← 0  , totalCaso4 ← 0 ;
+    inteiro: totalEntrevistas_0A18 ← 0 ,totalEntrevistas_19A59 ← 0 , totalEntrevistas_60A ← 0 ;
+
+
+    real: percentualMasc ← 0 , percentualFem ← 0 , percentualCaso1 ← 0 , percentualCaso3 ← 0,percentualCaso4 ← 0;
+
+Inicio
+
+    //formulario de entrada de dados
+        Continuar  ← "S"; //inicialização
+
+        enquanto (Continuar = "S") faca
+            //Reset dados   
+                sexo ← "";
+                idade ← 0 ;
+                pergunta3 ← "";
+                pergunta4 ← "";
+
+            //ENTRADA DE DADOS
+                imprima("1.	Informe o sexo?");
+                leia (sexo);
+
+                imprima("2.	Informe a idade? ");
+                leia (idade);
+
+                imprima("3.	Dificuldade em Respirar/Dor de Garganta/Febre/Tosse? ");
+                leia (pergunta3);
+
+                imprima("4.	Doenças como Diabetes/Doença Cardíaca/Pressão Alta? ");
+                leia (pergunta4);
+
+            //PRIMEIRA SAIDA DE DADOS
+                se (pergunta3 = "S" e pergunta4 = "S") entao
+                    imprima("Procurar uma unidade de saúde;");
+                    totalCaso1++;
+                senao 
+                    se ((pergunta3 = "S" ou pergunta4 = "S" ) e idade> 60 ) entao
+                      imprima("Procurar uma unidade de saúde;");  
+                      totalCaso1++
+                    senao
+                        se ((pergunta3 = "S" ou pergunta4 = "S" ) e idade >= 40 e idade <=59  ) senao
+                            imprima("Monitorar o estado de saúde em casa;"); 
+                            totalCaso3++ 
+                        senao
+                            se((pergunta3 = "N" ou pergunta4 = "N" )) entao
+                                imprima("Você está bem, mas fique em casa!");
+                                totalCaso4++;
+                            fimse;
+                        fimse;
+                    fimse;
+                fimse;
+
+            //Soma entrevistados
+                se (sexo = "M") entao
+                    totalMasculino ++;
+                fimse;
+                se (sexo = "F") entao
+                    totalFeminino ++;
+                fimse;
+                totalEntrevistados ++;
+
+            //Soma idade    
+                se (idade >=0 e idade <= 18) entao
+                    totalEntrevistas_0A18 ++;
+                entao
+                    se (idade > 18 e idade <60) entao
+                        totalEntrevistas_19A59 ++;
+                    entao
+                        totalEntrevistas_60A ++;
+                    fimse;
+                fimse
+
+
+            imprima("Deseja Continuar? S/N");
+            leia (Continuar);
+
+
+
+        fimenquanto
+
+    //CALCULOS SEGUNDA SAIDA
+        //PERCENTUAIS
+            percentualMasc  ← totalMasculino / totalEntrevistados * 100;
+            percentualFem  ← totalFeminino / totalEntrevistados * 100;
+            percentualCaso1 ← totalCaso1 / totalEntrevistados * 100;
+            percentualCaso3 ← totalCaso3 / totalEntrevistados * 100;
+            percentualCaso4 ← totalCaso4 / totalEntrevistados * 100;
+
+    //SEGUNDA SAÍDA
+        imprima("Percentual de entrevistas sexo masculino :" + percentualMasc + " %.");
+        imprima("Percentual de entrevistas sexo masculino :" + percentualFem + " %.");
+
+
+
+
+    //Aqui eu atribuo o nome Diogo para variavel nome
+    nome <- "Diogo";
+    idade <- 30;
+    altura <- 1,75;
+    estaTrabalhando <- Verdadeiro;
+
+    imprima("Digite o nome e a idade da pessoa");
+    lei(nome,idade);
+    imprima("Nome: " + nome + " e idade " + idade);
+Fim.

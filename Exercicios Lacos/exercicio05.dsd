@@ -1,0 +1,36 @@
+
+
+
+//5.	Construir um algoritmo que calcule a média aritmética de vários valores inteiros positivos, lidos externamente. O final da leitura acontecerá quando for lido um valor negativo.
+Programa exercicio05;  
+Var
+    real: rnumero, rcontador, rsoma, rmedia;
+ 
+Inicio
+
+    rsoma ← 0;
+    rnumero  ← 0;
+    rmedia ← 0;
+    faca 
+
+        //soma 
+        rsoma ← rsoma + rnumero;
+        
+        //pegunta
+        imprima ("Digite um valor");
+        leia (rnumero);
+
+        //incrementa
+        se (rnumero > )
+        rcontador ++;
+
+            //verifica
+    enquanto (rnumero >= 0) ;
+
+    //calcula media
+    rmedia  ← rsoma/rcontador;
+
+    imprima ("A média é :" + rmedia + "\n");
+
+Fim.
+

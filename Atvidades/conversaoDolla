@@ -1,0 +1,16 @@
+
+Program ConversaoDollar
+Var
+
+    real: dinheirosReal, dinheirosDollar;
+
+Inicio
+
+    imprima ("Escreva o valor em real: ");
+    leia (dinheirosReal);
+
+    dinheirosDollar <- dinheirosReal / 5,59;
+
+    imprima("Esse dinheiros vale:  "+ dinheirosDollar + "R$")
+
+fim.

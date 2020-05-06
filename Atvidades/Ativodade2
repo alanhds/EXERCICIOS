@@ -1,0 +1,52 @@
+
+Programa AtividadeSoma;
+
+//Escrever um algoritmo que some to total de 5 valores digitados
+
+Var
+
+    inteiro :  i, isoma, inumero;
+Inicio
+
+    isoma ← 0;
+    inumero ← 0;
+
+	i ← 1;
+	enquanto i <= 5 faz
+
+		imprima ("Digite o ", i, "º numero \n");
+		leia( inumero) ;
+
+        isoma ← inumero + isoma;
+
+        i ← i++;
+        
+	fimenquanto
+
+    imprima ("Total da soma dos numeros digitados = " + isoma + "\n");
+Fim;
+
+
+
+
+
+Var
+    inteiro: i , isoma, ivalor;
+Inicio
+
+    i<- 0;
+    isoma<- 0;
+
+    faca
+        imprima("Digite um valor: ");
+        leia( ivalor);
+
+        isoma <- isoma + ivalor;
+
+        i++;
+
+    enquanto( i<5  );
+
+    imprima("Soma : " + isoma);
+    
+fim.

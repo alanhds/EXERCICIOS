@@ -1,0 +1,25 @@
+Programa exercicio05;
+
+//7.	Criar um algoritmo que some os números fornecidos pelo usuário até que o número lido seja igual a zero e mostre o resultado.
+Var
+    real: rnumero, , rsoma;
+    
+Inicio
+
+    rsoma ← 0;
+    rnumero  ← 0;
+    rmedia ← 0;
+    
+    faca 
+
+        imprima ("Digite um valor");
+        leia (rnumero);
+         
+        rsoma ← rsoma + rnumero;
+
+    enquanto (rnumero = 0) ;
+
+
+    imprima ("A soma é :" + rsoma + "\n");
+
+Fim.

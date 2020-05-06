@@ -1,0 +1,29 @@
+Programa exercicio01;
+
+Var
+	inteiro: i, inumero[10], iNumPar,iNumImpar;
+Inicio
+
+    iNumPar  ← 0;
+    iNumImpar ← 0;
+	i  ← 0;
+
+	enquanto (i <= 9) faca
+
+            imprima ("Digite o " + i+1 + "º numero \n");
+            leia( inumero[i] ) ;
+            
+            se (inumero[i]%2  = 0) entao
+                iNumPar ← iNumPar + 1;
+            senao
+                iNumImpar ← iNumImpar + 1;
+            fimse;
+
+
+             i← i+1;
+
+	fimenquanto;
+
+      imprima ("Total de numeros pares = " + iNumPar + "\n");
+      imprima ("Total de numeros impares = " + iNumImpar);
+Fim.

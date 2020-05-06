@@ -1,0 +1,19 @@
+Programa EstruturaBasica;
+
+Var
+    caractere: nome;            //endreço: xyz
+    inteiro: idade;             //endereco abc
+    real: altura;               //endereço fgh
+    Logico: estaTrabalhando     //endereço lkj
+
+Inicio
+    //Aqui eu atribuo o nome Diogo para variavel nome
+    nome <- "Diogo";
+    idade <- 30;
+    altura <- 1,75;
+    estaTrabalhando <- Verdadeiro;
+
+    imprima("Digite o nome e a idade da pessoa");
+    lei(nome,idade);
+    imprima("Nome: " + nome + " e idade " + idade);
+Fim.

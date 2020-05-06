@@ -1,0 +1,14 @@
+Programa exercicio01;
+
+Var
+
+    inteiro :  i;
+Inicio
+
+	i ← 1;
+	enquanto i <= 20 faz
+		imprima (i + "\n");
+		i ← i + 1;
+	fimenquanto
+
+Fim.
